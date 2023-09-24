@@ -1,6 +1,6 @@
-use std::net::{SocketAddr, TcpListener};
-use sqlx::{Connection, PgConnection};
 use email_newsletter::configuration::get_configuration;
+use sqlx::{Connection, PgConnection};
+use std::net::{SocketAddr, TcpListener};
 
 fn spawn_app() -> String {
     // Binding to port 0 triggers an OS scan for an available port, this way we can run tests in parallel where each runs its own application
