@@ -48,7 +48,8 @@ jobs:
         uses: dtolnay/rust-toolchain@439cf607258077187679211f12aa6f19af4a0af7
         with:
           toolchain: ${{ env.RUST_VERSION }}
-      - uses: Swatinem/rust-cache@a95ba195448af2da9b00fb742d14ffaaf3c21f43
+      - name: Setup Rust Cache
+        uses: Swatinem/rust-cache@a95ba195448af2da9b00fb742d14ffaaf3c21f43
         with:
           key: sqlx-${{ env.SQLX_VERSION }}
       - name: Install sqlx-cli
@@ -85,7 +86,8 @@ jobs:
         with:
           toolchain: ${{ env.RUST_VERSION }}
           components: clippy
-      - uses: Swatinem/rust-cache@a95ba195448af2da9b00fb742d14ffaaf3c21f43
+      - name: Setup Rust Cache
+        uses: Swatinem/rust-cache@a95ba195448af2da9b00fb742d14ffaaf3c21f43
         with:
           key: sqlx-${{ env.SQLX_VERSION }}
       - name: Install sqlx-cli
