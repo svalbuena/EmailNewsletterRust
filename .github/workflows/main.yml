@@ -21,7 +21,7 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v4
       - name: Install Rust Toolchain
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@439cf607258077187679211f12aa6f19af4a0af7
       - name: Run Cargo Format
         run: cargo fmt --all --check
 
@@ -41,8 +41,8 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v4
       - name: Install Rust Toolchain
-        uses: dtolnay/rust-toolchain@stable
-      - uses: Swatinem/rust-cache@v2
+        uses: dtolnay/rust-toolchain@439cf607258077187679211f12aa6f19af4a0af7
+      - uses: Swatinem/rust-cache@a95ba195448af2da9b00fb742d14ffaaf3c21f43
         with:
           key: sqlx-${{ env.SQLX_VERSION }}
       - name: Install sqlx-cli
@@ -75,8 +75,8 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v4
       - name: Install Rust Toolchain
-        uses: dtolnay/rust-toolchain@stable
-      - uses: Swatinem/rust-cache@v2
+        uses: dtolnay/rust-toolchain@439cf607258077187679211f12aa6f19af4a0af7
+      - uses: Swatinem/rust-cache@a95ba195448af2da9b00fb742d14ffaaf3c21f43
         with:
           key: sqlx-${{ env.SQLX_VERSION }}
       - name: Install sqlx-cli
