@@ -10,8 +10,8 @@ concurrency:
 
 env:
   CARGO_TERM_COLOR: always
-  RUST_VERSION: 1.72.1
-  SQLX_VERSION: 0.7.1
+  RUST_VERSION: 1.73.0
+  SQLX_VERSION: 0.7.2
   SQLX_FEATURES: "rustls,postgres"
 
 jobs:
